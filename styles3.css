@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+}
+
+main {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--very-light-grayish-blue);
+}
+
+#notification-container {
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  background-color: var(--white);
+  box-shadow: 1px 0px 118px -17px rgb(244, 247, 249);
+}
+.notification-card img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#total-notifications {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+#notification-count > h2 {
+  color: var(--very-dark-blue);
+}
+
+#notification-count > h2 > span {
+  background-color: var(--blue);
+  color: var(--very-light-grayish-blue);
+  padding: 0rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+#mark-read-btn {
+  color: var(--grayish-blue);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#mark-read-btn:hover {
+  color: var(--blue);
+}
+
+.notification-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.notification-content {
+  margin-left: 1rem;
+  color: var(--grayish-blue);
+}
+
+.notification-content > p > span:first-child {
+  color: var(--very-dark-blue);
+  font-weight: 800;
+}
+
+.card-1 > .notification-content > p > span:last-child {
+  color: var(--dark-grayish-blue);
+  font-weight: 800;
+}
+
+.card-1 > .notification-content > p > span:last-child:hover {
+  color: var(--blue);
+}
+
+.card-3 > .notification-content > p > span:last-child {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.notification-content > p > span:hover {
+  color: var(--blue);
+}
+
+.card-4 {
+  position: relative;
+  padding-bottom: 7rem;
+}
+
+.msg {
+  position: absolute;
+  margin-top: 1.5rem;
+  border: 1px solid var(--light-grayish-blue-1);
+  padding: 1rem 2rem;
+  width: 70%;
+  border-radius: 0.5rem;
+}
+
+.msg:hover {
+  background-color: var(--light-grayish-blue-1);
+}
+
+.card-5 {
+  position: relative;
+}
+
+.card-5 > .notification-content > img {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.card-6 > .notification-content > p > span:last-child {
+  color: var(--dark-grayish-blue);
+  font-weight: 800;
+}
+
+.card-6 > .notification-content > p > span:last-child:hover {
+  color: var(--blue);
+}
+
+.card-7 > .notification-content > p > span:last-child {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.unread {
+  background-color: var(--very-light-grayish-blue);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--red);
+}
+
+@media (max-width: 926px) {
+  main {
+    padding: 0;
+  }
+
+  #notification-container {
+    padding: 1rem 0.5rem;
+    border-radius: 0;
+  }
+
+  .card-4 {
+    padding-bottom: 10rem;
+  }
+
+  .msg {
+    padding: 1rem 0.8rem;
+    right: 1rem;
+  }
+
+  .card-5 > .notification-content {
+    width: 50%;
+  }
+
+  .card-5 > .notification-content > img {
+    width: 70px;
+    top: 2rem;
+  }
+}

@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Book FB Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="left">
+
+            <div class="logo">
+                <img src="/home/fidel/Desktop/Comp 223/logo head.jpg">
+            </div>
+
+            <div class="search_bar">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search EBook">
+
+            </div>
+
+        </div>
+
+        <div class="center">
+
+            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-tv"></i>
+            <i class="fa-solid fa-store"></i>
+            <a href="friends.html">
+                <i class="fa-solid fa-users"></i>
+              </a>
+              
+
+        </div>
+
+        <div class="right">
+            <!-- Use the moon icon to toggle dark mode -->
+            <i class="fa-solid fa-moon" onclick="toggleDarkMode()" style="cursor: pointer;"></i>
+            <!-- This is just a simple example, you can style the icon as needed -->
+        
+            <div class="dropdown">
+                <!-- Create the dropdown button with the FontAwesome icon -->
+                <button class="dropbtn" onclick="toggleDropdown()"><i class="fa-solid fa-list-ul"></i></button>
+                <!-- Create the dropdown content -->
+                <div class="dropdown-content" id="dropdownMenu">
+                  <!-- Add dropdown items -->
+                  <a href="#">Settings & Privacy <i class="fas fa-shield-alt"></i></a>
+                  <a href="#">Help & Support <i class="fas fa-cog"></i></a>
+                  <a href="#">Logout<i class="fas fa-sign-out-alt"></i> </a>
+                </div>
+              </div>
+            <a href="messenger.html"><i class="fa-brands fa-facebook-messenger"></i></a>
+            <a href="notification.html">
+                <i class="fas fa-bell"></i>
+            </a>
+            <!-- Remove the profile pic img tag as it's not related to dark mode toggle -->
+        </div>
+      
+    </nav>
+
+    <!------------main--------------->
+
+    <div class="main">
+
+        <!------------------left------------------->
+
+        <div class="left">
+            <a href="profile.html">
+            <div class="img">
+                    <img src="/home/fidel/Desktop/Comp 223/profile pic.jpg">
+                     <p>Fidel Molday</p>
+            </div></a>
+            <a href="friends.html">
+            <div class="img">
+            <img src="/home/fidel/Desktop/Comp 223/post1.jpg">
+                <p>Friends</p>
+            </div>
+        </a>
+
+            <div class="img">
+                <img src="/home/fidel/Desktop/Comp 223/Black icon (1).jpg">
+                <p>Saved</p>
+            </div>
+
+            <div class="img">
+                <img src="/home/fidel/Desktop/Comp 223/group photo.jpg">
+                <p>Groups</p>
+            </div>
+            <a href="ecomerce.html">
+            <div class="img">
+                <img src="/home/fidel/Desktop/Comp 223/nairobi.jpg">
+                <p>Marketplace</p>
+            </div></a>
+
+            <div class="img">
+                <img src="/home/fidel/Desktop/Comp 223/watch.jpg">
+                <p>Watch</p>
+            </div>
+
+            <div class="img">
+                <img src="/home/fidel/Desktop/Comp 223/chevron-down-outline.svg">
+                <p>See more</p>
+            </div>
+
+            <hr>
+
+            <h2>Your shortcuts</h2>
+            <p class="edit">Edit</p>
+
+            <div class="shortcuts">
+                <img src="/home/fidel/Desktop/Comp 223/mobile gaming.jpg">
+                <p>MOBILE GAMES</p>
+            </div>
+
+            <div class="shortcuts">
+                <img src="/home/fidel/Desktop/Comp 223/git logo.jpg">
+                <p>Online Education</p>
+            </div>
+
+            <div class="shortcuts">
+                <img src="/home/fidel/Desktop/Comp 223/fish.jpg">
+                <p>Food Lovers</p>
+            </div>
+
+            <div class="shortcuts">
+                <img src="/home/fidel/Desktop/Comp 223/school.jpg">
+                <p>Social Media Academy</p>
+            </div>
+            <a href="pcshop.html"> 
+            <div class="shortcuts">
+                <img src="/home/fidel/Desktop/Comp 223/pc shop.jpg">
+                <p>PC Shop</p>
+            </div></a>
+
+            <div class="shortcuts">
+                <img src="/home/fidel/Desktop/Comp 223/chevron-down-outline.svg">
+                <p>See more</p>
+            </div>
+
+        </div>
+
+        <!------------center---------------------->
+
+        <div class="center">
+
+            <div class="top_box">
+                <div class="story_card">
+                    <img src="/home/fidel/Desktop/Comp 223/watch.jpg">
+                    <div class="story_upload">
+                        <img src="/home/fidel/Desktop/Comp 223/profile pic.jpg">
+                        <p class="story_tag">Create story</p>
+                    </div>
+                </div>
+            
+                <div class="story_card">
+                    <img src="/home/fidel/Desktop/Comp 223/max.jpg">
+                    <div class="story_profile">
+                        <div class="circle"></div>
+                        <img src="/home/fidel/Desktop/Comp 223/prof4.jpg">
+                    </div>
+                    <div class="story_name">
+                        <p class="name">Julius Mwambu</p>
+                    </div>
+                </div>
+            
+                <div class="story_card">
+                    <img src="/home/fidel/Desktop/Comp 223/Israel.jpg">
+                    <div class="story_profile">
+                        <div class="circle"></div>
+                        <img src="/home/fidel/Desktop/Comp 223/Israel.jpg">
+                    </div>
+                    <div class="story_name">
+                        <p class="name">Israel Nicodemus</p>
+                    </div>
+                </div>
+            
+                <div class="story_card">
+                    <img src="/home/fidel/Desktop/Comp 223/webphoto.jpg">
+                    <div class="story_profile">
+                        <div class="circle"></div>
+                        <img src="/home/fidel/Desktop/Comp 223/web img.jpg">
+                    </div>
+                    <div class="story_name">
+                        <p class="name">David Polycarp</p>
+                    </div>
+                </div>
+            
+                <div class="story_card">
+                    <img src="/home/fidel/Desktop/Comp 223/DSC03717.jpg">
+                    <div class="story_profile">
+                        <div class="circle"></div>
+                        <img src="/home/fidel/Desktop/Comp 223/DSC03717.jpg">
+                    </div>
+                    <div class="story_name">
+                        <p class="name">Fidel Ouma</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="my_post">
+
+                <div class="post_top">
+
+                    <img src="/home/fidel/Desktop/Comp 223/web photo.jpg">
+                    <input type="text" placeholder="What's on you mind, Henry?">
+
+                </div>
+
+                <hr>
+
+                <div class="post_bottom">
+
+                    <div class="post_icon">
+                        <i class="fa-solid fa-video red"></i>
+                        <a href="livevideo.html"><p>Live video</p></a>
+                    </div>
+
+                    <div class="post_icon">
+                        <i class="fa-solid fa-images green"></i>
+                        <a href="photo.html"><p>Photo/Video</p></a>
+                    </div>
+
+                    <div class="post_icon">
+                        <i class="fa-regular fa-face-grin yellow"></i>
+                        <a href="feeling.html"><p>Feeling/Activities</p></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="room">
+
+                <div class="room_image">
+
+                    <img src="/home/fidel/Desktop/Comp 223/web img.jpg">
+                    <p class="room_tag">Create room</p>
+
+                </div>
+
+                <div class="room_profile">
+
+                    <img src="/home/fidel/Desktop/Comp 223/profile pic.jpg">
+                    <img src="/home/fidel/Desktop/Comp 223/post1.jpg">
+                    <img src="/home/fidel/Desktop/Comp 223/moldays.jpg">
+                    <img src="/home/fidel/Desktop/Comp 223/profile.jpg">
+                    <img src="/home/fidel/Desktop/Comp 223/Jemo.jpeg">
+                    <img src="/home/fidel/Desktop/Comp 223/web photo.jpg">
+                    <img src="/home/fidel/Desktop/Comp 223/Israel.jpg">
+                    <img src="/home/fidel/Desktop/Comp 223/webphoto.jpg">
+
+                </div>
+
+            </div>
+
+
+            <div class="friends_post">
+
+                <div class="friend_post_top">
+
+                    <div class="img_and_name">
+
+                        <img src="/home/fidel/Desktop/Comp 223/post1.jpg">
+
+                        <div class="friends_name">
+                            <p class="friends_name">
+                                Larry Kalum
+                            </p>
+                            <p class="time">16h.<i class="fa-solid fa-user-group"></i></p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="menu">
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </div>
+
+                </div>
+
+                <img src="/home/fidel/Desktop/Comp 223/group photo.jpg">
+
+                <div class="info">
+
+                    <div class="emoji_img">
+                        <img src="/home/fidel/Desktop/Comp 223/emoji2.jpg">
+                        <img src="/home/fidel/Desktop/Comp 223/emoji3.jpg">
+                        <img src="/home/fidel/Desktop/Comp 223/emojis.jpg">
+                        <p>You, Henry and 25K others</p>
+                    </div>
+
+                    <div class="comment">
+                        <p>421 Comments</p>
+                        <p>1.3K Shares</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="like">
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-thumbs-up activi"></i>
+                        <p>Like</p>
+                    </div>
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-message"></i>
+                        <p>Comments</p>
+                    </div>
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-share"></i>
+                        <p>Share</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="comment_warpper">
+
+                    <img src="/home/fidel/Desktop/Comp 223/profile pic.jpg">
+                    <div class="circle"></div>
+
+                    <div class="comment_search">
+
+                        <input type="text" placeholder="Write a comment">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <i class="fa-solid fa-camera"></i>
+                        <i class="fa-regular fa-note-sticky"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="friends_post">
+
+                <div class="friend_post_top">
+
+                    <div class="img_and_name">
+
+                        <img src="/home/fidel/Desktop/Comp 223/webphoto.jpg">
+
+                        <div class="friends_name">
+                            <p class="friends_name">
+                                David Leusing
+                            </p>
+                            <p class="time">16h.<i class="fa-solid fa-user-group"></i></p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="menu">
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </div>
+
+                </div>
+
+                <img src="/home/fidel/Desktop/Comp 223/nairobi.jpg">
+
+                <div class="info">
+
+                    <div class="emoji_img">
+                        <img src="/home/fidel/Desktop/Comp 223/emojis.jpg">
+                        <img src="/home/fidel/Desktop/Comp 223/emoji3.jpg">
+                        <img src="/home/fidel/Desktop/Comp 223/emoji2.jpg">
+                        <p>You, Charith Disanayaka and 25K others</p>
+                    </div>
+
+                    <div class="comment">
+                        <p>421 Comments</p>
+                        <p>1.3K Shares</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="like">
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-thumbs-up activi"></i>
+                        <p>Like</p>
+                    </div>
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-message"></i>
+                        <p>Comments</p>
+                    </div>
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-share"></i>
+                        <p>Share</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="comment_warpper">
+
+                    <img src="/home/fidel/Desktop/Comp 223/moldays.jpg">
+                    <div class="circle"></div>
+
+                    <div class="comment_search">
+
+                        <input type="text" placeholder="Write a comment">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <i class="fa-solid fa-camera"></i>
+                        <i class="fa-regular fa-note-sticky"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="friends_post">
+
+                <div class="friend_post_top">
+
+                    <div class="img_and_name">
+
+                        <img src="/home/fidel/Desktop/Comp 223/web photo.jpg">
+
+                        <div class="friends_name">
+                            <p class="friends_name">
+                                Julias Mwambu
+                            </p>
+                            <p class="time">16h.<i class="fa-solid fa-user-group"></i></p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="menu">
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </div>
+
+                </div>
+
+                <img src="/home/fidel/Desktop/new proj/golf.jpg">
+
+                <div class="info">
+
+                    <div class="emoji_img">
+                        <img src="/home/fidel/Desktop/Comp 223/emojis.jpg">
+                        <img src="/home/fidel/Desktop/Comp 223/emoji2.jpg">
+                        <img src="/home/fidel/Desktop/Comp 223/emoji3.jpg">
+                        <p>You, Charith Disanayaka and 25K others</p>
+                    </div>
+
+                    <div class="comment">
+                        <p>421 Comments</p>
+                        <p>1.3K Shares</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="like">
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-thumbs-up activi"></i>
+                        <p>Like</p>
+                    </div>
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-message"></i>
+                        <p>Comments</p>
+                    </div>
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-share"></i>
+                        <p>Share</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="comment_warpper">
+
+                    <img src="/home/fidel/Desktop/Comp 223/profile pic.jpg">
+                    <div class="circle"></div>
+
+                    <div class="comment_search">
+
+                        <input type="text" placeholder="Write a comment">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <i class="fa-solid fa-camera"></i>
+                        <i class="fa-regular fa-note-sticky"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="friends_post">
+
+                <div class="friend_post_top">
+
+                    <div class="img_and_name">
+
+                        <img src="/home/fidel/Desktop/Comp 223/policarp.jpg">
+
+                        <div class="friends_name">
+                            <p class="friends_name">
+                                David Wambua
+                            </p>
+                            <p class="time">16h.<i class="fa-solid fa-user-group"></i></p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="menu">
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </div>
+
+                </div>
+
+                <img src="/home/fidel/Desktop/Comp 223/post.jpg">
+
+                <div class="info">
+
+                    <div class="emoji_img">
+                        <img src="/home/fidel/Desktop/Comp 223/emoji3.jpg">
+                        <img src="/home/fidel/Desktop/Comp 223/emojis.jpg">
+                        <img src="/home/fidel/Desktop/Comp 223/emoji2.jpg">
+                        <p>You, Charith Disanayaka and 25K others</p>
+                    </div>
+
+                    <div class="comment">
+                        <p>421 Comments</p>
+                        <p>1.3K Shares</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="like">
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-thumbs-up activi"></i>
+                        <p>Like</p>
+                    </div>
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-message"></i>
+                        <p>Comments</p>
+                    </div>
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-share"></i>
+                        <p>Share</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="comment_warpper">
+
+                    <img src="/home/fidel/Desktop/Comp 223/profile pic.jpg">
+                    <div class="circle"></div>
+
+                    <div class="comment_search">
+
+                        <input type="text" placeholder="Write a comment">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <i class="fa-solid fa-camera"></i>
+                        <i class="fa-regular fa-note-sticky"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="friends_post">
+
+                <div class="friend_post_top">
+
+                    <div class="img_and_name">
+
+                        <img src="/home/fidel/Desktop/Comp 223/web photo.jpg">
+
+                        <div class="friends_name">
+                            <p class="friends_name">
+                                Israel Nicodemus
+                            </p>
+                            <p class="time">16h.<i class="fa-solid fa-user-group"></i></p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="menu">
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </div>
+
+                </div>
+
+                <img src="/home/fidel/Desktop/Comp 223/Post.jpg">
+
+                <div class="info">
+
+                    <div class="emoji_img">
+                        <img src="/home/fidel/Desktop/Comp 223/emoji3.jpg">
+                        <img src="/home/fidel/Desktop/Comp 223/emojis.jpg">
+                        <img src="/home/fidel/Desktop/Comp 223/emoji2.jpg">
+                        <p>You, Charith Disanayaka and 25K others</p>
+                    </div>
+
+                    <div class="comment">
+                        <p>421 Comments</p>
+                        <p>1.3K Shares</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="like">
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-thumbs-up activi"></i>
+                        <p>Like</p>
+                    </div>
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-message"></i>
+                        <p>Comments</p>
+                    </div>
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-share"></i>
+                        <p>Share</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="comment_warpper">
+
+                    <img src="/home/fidel/Desktop/Comp 223/profile.jpg">
+                    <div class="circle"></div>
+
+                    <div class="comment_search">
+
+                        <input type="text" placeholder="Write a comment">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <i class="fa-solid fa-camera"></i>
+                        <i class="fa-regular fa-note-sticky"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="load">
+                <button>Load More</button>
+            </div>
+
+            <p class="end">Design By<span><i class="fa-regular fa-face-grin"></i>
+                    David|Fidel|Julias|Israel|Henry|Kalum</span></p>
+
+
+        </div>
+
+        <!------------------right------------------>
+
+        <div class="right">
+
+            <div class="first_warpper">
+
+                <div class="page">
+
+                    <h2>Your Pages and profiles</h2>
+                    <div class="menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+
+                </div>
+
+                <div class="page_img">
+                    <img src="/home/fidel/Desktop/Comp 223/profile pic.jpg">
+                    <p>Web Designer</p>
+                </div>
+
+                <div class="page_icon">
+                    <i class="fa-regular fa-bell"></i>
+                    <p>8 Notifications</p>
+                </div>
+
+                <div class="page_icon">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <p>Create promotion</p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="second_warpper">
+
+                <h2>Birthdays</h2>
+
+                <div class="img_and_tag">
+
+                    <img src="/home/fidel/Desktop/Comp 223/birthday.jpg">
+                    <p><span>David Leusing </span>and<span> 2 others </span>have birthdays today</p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+
+            <div class="third_warpper">
+
+                <div class="contact_tag">
+
+                    <h2>Contacts</h2>
+
+                    <div class="contact_icon">
+
+                        <i class="fa-solid fa-video"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="contact">
+
+                    <img src="/home/fidel/Desktop/Comp 223/web photo.jpg">
+                    <p>Henry Ouma </p>
+
+                </div>
+
+                <div class="contact">
+
+                    <img src="/home/fidel/Desktop/Comp 223/web img.jpg">
+                    <p>Davin Anyango </p>
+
+                </div>
+
+                <div class="contact">
+
+                    <img src="/home/fidel/Desktop/Comp 223/school.jpg">
+                    <p>Sam Omara </p>
+
+                </div>
+
+                <div class="contact">
+
+                    <img src="/home/fidel/Desktop/Comp 223/moldays.jpg">
+                    <p>Andrew Kibe </p>
+
+                </div>
+
+                <div class="contact">
+
+                    <img src="/home/fidel/Desktop/Comp 223/policarp.jpg">
+                    <p>Julias Mulatya</p>
+
+                </div>
+
+                <div class="contact">
+
+                    <img src="/home/fidel/Desktop/Comp 223/DSC03717.jpg">
+                    <p>Aloyce Pundit </p>
+
+                </div>
+
+                <div class="contact">
+
+                    <img src="/home/fidel/Desktop/Comp 223/Jemo.jpeg">
+                    <p>James Ngandu </p>
+
+                </div>
+
+                <div class="contact">
+
+                    <img src="/home/fidel/Desktop/Comp 223/Israel.jpg">
+                    <p>Nicodemus Israel</p>
+
+                </div>
+
+                <div class="contact">
+
+                    <img src="/home/fidel/Desktop/Comp 223/webphoto.jpg">
+                    <p>David Leusing </p>
+
+                </div>
+
+                <div class="contact">
+
+                    <img src="/home/fidel/Desktop/Comp 223/max.jpg">
+                    <p>Max Havey </p>
+
+                </div>
+
+                <div class="contact">
+
+                    <img src="/home/fidel/Desktop/Comp 223/beryl.jpg">
+                    <p>Precious Beryl </p>
+
+                </div>
+
+                <div class="contact">
+
+                    <img src="/home/fidel/Desktop/Comp 223/webphoto.jpg">
+                    <p>David Polycarp </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const nav = document.querySelector('nav');
+            const rightSection = document.querySelector('.right');
+            const main = document.querySelector('.main');
+        
+            // Toggle dark mode class on body
+            body.classList.toggle('dark-mode');
+        
+            // Toggle dark mode class on nav
+            nav.classList.toggle('dark-mode');
+        
+            // Toggle dark mode class on right section
+            rightSection.classList.toggle('dark-mode');
+        
+            // Toggle dark mode class on main section
+            main.classList.toggle('dark-mode');
+        }    
+    </script>
+
+
+</body>
+
+</html>
