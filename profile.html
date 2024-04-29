@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile page - FriendVerse</title>
+    <link rel="stylesheet" href="profile1.css">
+    <script src="https://kit.fontawesome.com/78a9ebfe36.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <a href="index.html"><img src="logo head.jpg" alt="" class="logo"></a>
+            <ul>
+                <li><img src="images/notification.png" alt=""></li>
+                <li><img src="images/inbox.png" alt=""></li>
+                <li><img src="images/video.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="images/search.png" alt="" >
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="profile pic.jpg" alt="">
+            </div>
+        </div>
+<!-- -------------------------dropdown-menu------------------------------- -->
+        <div class="settings-menu">
+
+            <div id="dark-btn">
+                <span></span>
+            </div>
+
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="profile pic.jpg" alt="">
+                    <div>
+                        <p>Molday Fidel</p>
+                        <a href="profile.html">See your profile</a>
+                    </div>
+                </div> 
+                <hr>
+                <div class="user-profile">
+                    <img src="images/feedback.png" alt="">
+                    <div>
+                        <p>Give Feedback</p>
+                        <a href="">Help us to improve the design</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="settings-links">
+                    <img src="images/setting.png" class="settings-icon" alt="">
+                    <a href="#">Settings & Privacy <img src="images/arrow.png" width="10px" alt=""></a>
+                </div>
+                <div class="settings-links">
+                    <img src="images/help.png" class="settings-icon" alt="">
+                    <a href="#">Help & Support <img src="images/arrow.png" width="10px" alt=""></a>
+                </div>
+                <div class="settings-links">
+                    <img src="images/display.png" class="settings-icon" alt="">
+                    <a href="#">Display & Accessibility <img src="images/arrow.png" width="10px" alt=""></a>
+                </div>
+                <div class="settings-links">
+                    <img src="images/logout.png" class="settings-icon" alt="">
+                    <a href="#">Logout <img src="images/arrow.png" width="10px" alt=""></a>
+                </div>
+            </div>
+            
+        </div>
+
+    </nav>
+<!-- ----------------profile-page------------------- -->
+
+    <div class="profile-container">
+        <img src="images/cover.png" class="cover-img" alt="">
+        <div class="profile-details">
+            <div class="pd-left">
+                <div class="pd-row">
+                    <img src="profile pic.jpg" class="pd-image" alt="">
+                    <div>
+                        <h3>Fidel Molday</h3>
+                        <p>120 Friends - 20 mutual</p>
+                        <img src="golf.jpg" alt="">
+                        <img src="school.jpg" alt="">
+                        <img src="webphoto.jpg" alt="">
+                        <img src="profile.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="pd-right">
+
+                <button type="button"><img src="images/add-friends.png" alt="">Friend</button>
+                <button type="button"><img src="images/message.png" alt="">Message</button>
+                <br>
+                <a href=""><img src="images/more.png" alt=""></a>
+            </div>
+        </div>
+
+    <div class="profile-info">
+        <div class="info-col">
+
+
+            <div class="profile-intro">
+                <h3>Intro</h3>
+                <p class="intro-text">Believe in yourself and you can do 
+                    unbelievable! <img src="images/feeling.png" alt=""></p>
+                    <hr>
+                    <ul>
+                        <li><img src="images/profile-job.png" alt="">Director at 99media Ltd</li>
+                        <li><img src="images/profile-study.png" alt="">Studied at Homa Bay School</li>
+                        <li><img src="images/profile-study.png" alt="">Went to DPS Delhi</li>
+                        <li><img src="" alt="">Lives in Banglore, India</li>
+                        <li><img src="images/profile-location.png" alt="">From Banglore, India</li>
+                    </ul>
+            </div>
+            <div class="profile-intro">
+                <div class="title-box">
+                    <h3>Photos</h3>
+                    <a href="">All Photos</a>
+                </div>
+                
+                <div class="photo-box">
+                    <div><img src="" alt=""></div>
+                    <div><img src="" alt=""></div>
+                    <div><img src="" alt=""></div>
+                    <div><img src="" alt=""></div>
+                    <div><img src="" alt=""></div>
+                    <div><img src="" alt=""></div>
+                </div>
+            </div>
+
+            <div class="profile-intro">
+                <div class="title-box">
+                    <h3>Friends</h3>
+                    <a href="">All Friends</a>
+                </div>
+                <p>120 (10 mutual)</p>
+                <div class="friends-box">
+                    <div><img src="Jemo.jpeg" alt=""><p>Joseph</p></div>
+                    <div><img src="Israel.jpg" alt=""><p>Nathon</p></div>
+                    <div><img src="/home/fidel/Desktop/Comp 223/DSC03717.jpg" alt=""><p>George</p></div>
+                    <div><img src="beryl.jpg" alt=""><p>Francis</p></div>
+                    <div><img src="prof4.jpg" alt=""><p>Anthony</p></div>
+                    <div><img src="moldays.jpg" alt=""><p>Michae</p></div>
+                    <div><img src="max.jpg" alt=""><p>Edward</p></div>
+                    <div><img src="post1.jpg" alt=""><p>Bradon</p></div>
+                    <div><img src="policarp.jpg" alt=""><p>James</p></div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="post-col">
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="profile pic.jpg" alt="">
+                    <div>
+                        <p>Fidel Molday</p>
+                        <small>Public <i class="fa-solid fa-caret-down"></i></small>
+                    </div>
+                </div>
+
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="What's on your mind, John?"></textarea>
+
+                    <div class="add-post-links">
+                        <a href="#"><img src="images/live-video.png" alt="">Live Video</a>
+                        <a href="#"><img src="images/photo.png" alt="">Photo/Video</a>
+                        <a href="#"><img src="images/feeling.png" alt="">Feeling/Activity</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="profile pic.jpg" alt="">
+                        <div>
+                            <p>Fidel Molday</p>
+                            <span>June 24 2024, 13:40 pm </span>
+                        </div>
+                    </div>
+                    <a href="#" alt=""><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">
+                    This social media website template using <span>HTML and CSS</span>
+                    this website design looks like Facebook.
+                </p>
+                <p class="post-text">   
+                    Added a <span>toggle button</span> on this website design,<i class="fa-solid fa-hand-point-up"></i>
+                    that button will change the website from dark mode to 
+                    light or from the light mode to the dark mode.
+                </p>
+                <p class="post-text">    
+                    Created a <span>drop-down menu</span>, light mode and dark 
+                    mode switching option using simple <span>JavaScript</span>.
+                </p>
+                <p class="post-text">
+                    Click the logo <span>FriendVerse</span>
+                    <i class="fa-solid fa-hand-point-up"></i>
+                    to go back to home page.
+                </p>
+
+                <img src="web photo.jpg" class="post-img" alt="">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png" alt="">450</div>
+                        <div><img src="images/comments.png" alt="">176</div>
+                        <div><img src="images/share.png" alt="">35</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png" alt=""><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png" alt="">
+                        <div>
+                            <p>Fidel Molday</p>
+                            <span>June 24 2022, 13:40 pm </span>
+                        </div>
+                    </div>
+                    <a href="#" alt=""><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">
+                    Most software today is very much like an Egyptian 
+                    pyramid with millions of bricks piled on top of each
+                    other, with no structural integrity, but just done by
+                    brute force and thousands of slaves.
+                    <br>
+                    <span>Alan Kay</span>
+                </p>
+                <img src="images/feed-image-2.png" class="post-img" alt="">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png" alt="">450</div>
+                        <div><img src="images/comments.png" alt="">176</div>
+                        <div><img src="images/share.png" alt="">35</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png" alt=""><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png" alt="">
+                        <div>
+                            <p>Fidel Molday</p>
+                            <span>June 24 2022, 13:40 pm </span>
+                        </div>
+                    </div>
+                    <a href="#" alt=""><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">
+                    A computer lets you make more mistakes faster than any other 
+                    invention with the possible exceptions of 
+                    handguns and Tequila.
+                    <br>
+                    <span>Mitch Ratcliffe</span>
+                </p>
+                <img src="images/feed-image-3.png" class="post-img" alt="">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png" alt="">450</div>
+                        <div><img src="images/comments.png" alt="">176</div>
+                        <div><img src="images/share.png" alt="">35</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png" alt=""><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+ <div class="footer">
+    <p>Copyright © Fidel,David,Israel,Henry,Larry,Julius. Made with <i class="fa-sharp fa-solid fa-heart"></i></p>
+ </div>   
+
+
+ <script src="profile.js"></script>
+    
+</body>
+</html>

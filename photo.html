@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        
+        <style>
+            /* CSS for the three main sections */
+            .main {
+                display: flex;
+            }
+    
+            .left-panel, .right-panel, .center-panel {
+                padding: 20px;
+            }
+    
+            .left-panel {
+                background-color: #f0f0f0;
+                flex: 1;
+            }
+            .left-panel {
+                /* Other styles */
+            }
+            
+            .left-panel h1 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            
+            .left-panel .section {
+                margin-top: 20px;
+            }
+            
+            .left-panel .section h2 {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            
+            .left-panel ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            
+            .left-panel li {
+                margin-bottom: 5px;
+            }
+            
+    
+            .center-panel {
+                background-color: #e0e0e0;
+                flex: 2; /* This makes the center panel twice as wide as the others */
+            }
+    
+            .right-panel {
+                background-color: #f0f0f0;
+                flex: 1;
+            }
+
+            /*...right style......*/
+                .right-panel {
+                    background-color: #f0f0f0;
+                    flex: 1;
+                    padding: 20px;
+                }
+            
+                .right-panel h1 {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+            
+                .right-panel .section {
+                    margin-bottom: 20px;
+                }
+            
+                .right-panel .section h2 {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+            
+                .right-panel .section ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+            
+                .right-panel .section ul li {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 5px;
+                }
+            
+                .right-panel .section ul li img {
+                    width: 150px; /* Adjust the width of the image as needed */
+                    height: auto; /* Maintain aspect ratio */
+                    margin-right: 10px;
+                    border-radius: 10px;
+                }
+                .center-panel {
+                    background-color: #e0e0e0;
+                    flex: 2; /* This makes the center panel twice as wide as the others */
+                    padding: 20px;
+                }
+                
+                .related-searches {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                    gap: 20px;
+                }
+                
+                .search-item {
+                    position: relative; /* Needed for absolute positioning of the overlay */
+                }
+                
+                .search-item img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 10px;
+                    transition: transform 0.3s ease;
+                }
+                
+                .search-item img:hover {
+                    transform: scale(1.1); /* Increase the size of the image on hover */
+                }
+                
+                .search-item .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0; /* Initially hidden */
+                    transition: opacity 0.3s ease;
+                }
+                
+                .search-item:hover .overlay {
+                    opacity: 1; /* Show the overlay on hover */
+                }
+                
+                .search-item p {
+                    margin-top: 10px;
+                    color: white; /* Text color for overlay */
+                }
+                /* Light mode styles */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+nav.light-mode {
+    background-color: #f0f0f0;
+}
+
+.left-panel.light-mode,
+.right-panel.light-mode {
+    background-color: #f0f0f0;
+}
+
+.center-panel.light-mode {
+    background-color: #e0e0e0;
+}
+
+.search-item .overlay.light-mode {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+}
+
+.search-item p.light-mode {
+    color: white; /* Text color for overlay */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+nav.dark-mode {
+    background-color: #333333;
+}
+
+.left-panel.dark-mode,
+.right-panel.dark-mode {
+    background-color: #292929;
+}
+
+.center-panel.dark-mode {
+    background-color: #1f1f1f;
+}
+
+.search-item .overlay.dark-mode {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
+}
+
+.search-item p.dark-mode {
+    color: black; /* Text color for overlay */
+}
+
+                
+            
+
+        </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="left">
+
+            <div class="logo">
+                <img src="/home/fidel/Desktop/Comp 223/logo head.jpg">
+            </div>
+
+            <div class="search_bar">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search EBook">
+
+            </div>
+
+        </div>
+
+        <div class="center">
+
+            <a href="social book">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <i class="fa-solid fa-tv"></i>
+            <i class="fa-solid fa-store"></i>
+            <i class="fa-solid fa-users"></i>
+
+        </div>
+
+        <div class="right">
+            <!-- Use the moon icon to toggle dark mode -->
+            <i class="fa-solid fa-moon" onclick="toggleDarkMode()" style="cursor: pointer;"></i>
+            <!-- This is just a simple example, you can style the icon as needed -->
+        
+            <i class="fa-solid fa-list-ul"></i>
+            <i class="fa-brands fa-facebook-messenger"></i>
+            <i class="fa-solid fa-bell"></i>
+            
+        </div>
+      
+    </nav>
+
+    <div class="main">
+
+        <!---- left side----->
+        <div class="left-panel">
+            <div class="left-panel">
+                <h1>YOU MAY KNOW</h1>
+                <div class="section">
+                    <h2>Universities in Kenya</h2>
+                    <!-- List of universities -->
+                    <ul>
+                        <li>
+                            <img src="university1.jpeg" alt="University of Eldoret">
+                            <i><b>University of Eldoret</b></i> <br> <br>
+                            <p>
+                                University located in Uasin Gishu (commonly knownas home of champions), 
+                                Rift Valley.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="university2.jpeg" alt="University 2">
+                            <i><b>The University of Nairobi</b></i> <br> <br>
+                            <p>
+                                A research intensive university with a reputation for excellence and a strong
+                                vibrant research culture.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="university3.jpeg" alt="University 3">
+                            <i><b>Baraton University</b></i> <br> <br>
+                            <p>
+                                We are one of the largest, most diverse universities in Africa
+                            </p>
+                        </li>
+                        <!-- Add more universities as needed -->
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>Tourism Sites in Kenya</h2>
+                    <!-- List of tourism sites -->
+                    <ul>
+                        <li>
+                            <img src="amboseli.jpeg" alt="Site 1">
+                            amboseli National Park
+                        </li>
+                        <li>
+                            <img src="mahimahiu.jpeg" alt="Site 2">
+                            Mahi Mahiu
+                        </li>
+                        <li>
+                            <img src="masaimara.jpeg" alt="Site 3">
+                            Masai Mara
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>  
+        </div>
+        <div class="center-panel">
+            <h1>Related Searches</h1>
+            <div class="related-searches">
+                <div class="search-item">
+                    <img src="post1.jpg" alt="Related Search 1">
+                    <p>Trending musician</p>
+                </div>
+                <div class="search-item">
+                    <img src="prof4.jpg" alt="Related Search 2">
+                    <p>Meme star</p>
+                </div>
+                <div class="search-item">
+                    <img src="request1.jpg" alt="Related Search 3">
+                    <p></p>
+                </div>
+                <div class="search-item">
+                    <img src="movie1.jpg" alt="Related Search 3">
+                    <p>Latest movie</p>
+                </div>
+                <div class="search-item">
+                    <img src="" alt="Related Search 3">
+                    <p></p>
+                </div>
+                <div class="search-item">
+                    <img src="" alt="Related Search 3">
+                    <p></p>
+                </div>
+                <div class="search-item">
+                    <img src="" alt="Related Search 1">
+                    <p></p>
+                </div>
+                <div class="search-item">
+                    <img src="" alt="Related Search 1">
+                    <p></p>
+                </div>
+                <div class="search-item">
+                    <img src="post1.jpg" alt="Related Search 1">
+                    <p>Miss Tourism</p>
+                </div>
+                <div class="search-item">
+                    <img src="policarp.jpg" alt="Related Search 3">
+                    <p>Computer experts</p>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="right-panel">
+            <h1>FAVOURITES</h1>
+            <div class="section">
+                <h2>Favourite Watches</h2>
+                <!-- List of favourite foods -->
+                <ul>
+                    <li>
+                        <img src="favorite1.jpg" alt="Food 1">
+                        <i>Heartbeat measure watch <br> <br>
+                            price: KSH. 6,499
+                        
+                    </li>
+                    <p>
+                        Uses light and optical detectors to measure heart rate. 
+
+                    </p>
+                    <li>
+                        <img src="favorite2.jpg" alt="Food 2">
+                        <i>iOS Model Watch <br> <br>
+                            Price: KSH. 64,000 
+                    </li>
+                    <p>
+                        a wearable smartwatch that allows users to accomplish a variety of tasks, 
+                        including making phone calls, 
+                        sending text messages and reading email.
+                    </p>
+                    <li>
+                        <img src="favorite3.jpg" alt="Food 3">
+                        <i>Smart watch <br> <br>
+                            Price: KSh. 7,999
+                    </li>
+                    <p>
+                        a portable device worn on the wrist that supports apps and 
+                        acts as an extension of your mobile phone in some cases.  
+
+                    </p>
+                    <!-- Add more favourite foods as needed -->
+                </ul>
+            </div> 
+            <br>
+            <div class="section">
+                <h2>Favourite Movies</h2>
+                <!-- List of favourite movies -->
+                <ul>
+                    <li>
+                        <img src="movie1.jpg" alt="Movie 1">
+                        Mr. Incredibles
+                    </li>
+                    <p>
+                        a superhero who possesses superhuman strength, durability, and stamina.
+                    </p>
+                    <li>
+                        <img src="movie2.jpg" alt="Movie 2">
+                        Coco
+                    </li>
+                    <p>
+                        The story follows a 12-year-old boy named Miguel (Gonzalez) who is accidentally 
+                        transported to the Land of the Dead, where he seeks the help of his deceased musician great-great-grandfather 
+                        to return him to his family and reverse their ban on music.
+                    </P>
+                    <li>
+                        <img src="movie3.jpg" alt="Movie 3">
+                        Luca
+                    </li>
+                    <p>
+                        A young boy experiences an unforgettable seaside 
+                        summer on the Italian Riviera filled with gelato, 
+                        pasta and endless scooter rides. 
+                    </p>
+                    <!-- Add more favourite movies as needed -->
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const nav = document.querySelector('nav');
+            const rightSection = document.querySelector('.right');
+            const main = document.querySelector('.main');
+        
+            // Toggle dark mode class on body
+            body.classList.toggle('dark-mode');
+        
+            // Toggle dark mode class on nav
+            nav.classList.toggle('dark-mode');
+        
+            // Toggle dark mode class on right section
+            rightSection.classList.toggle('dark-mode');
+        
+            // Toggle dark mode class on main section
+            main.classList.toggle('dark-mode');
+        }    
+    </script>
+</body>
+</html>

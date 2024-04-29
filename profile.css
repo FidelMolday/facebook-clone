@@ -1,0 +1,161 @@
+.friends-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .friend-requests {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .friend-requests h2 {
+    margin-top: 0;
+  }
+  
+  .friend-requests ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .friend-requests li {
+    margin-bottom: 10px;
+  }
+  
+  .name {
+    font-weight: bold;
+  }
+  
+  .confirm-btn, .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .confirm-btn {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 5px;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  /* Styles from previous code remain unchanged */
+
+.suggested-friends {
+    margin-top: 20px;
+  }
+  
+  .suggested-friends h2 {
+    margin-top: 0;
+  }
+  
+  .suggested-friends ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .suggested-friends li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .suggested-friends li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .add-btn, .remove-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-btn {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 5px;
+  }
+  
+  .remove-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  /* Styles from previous code remain unchanged */
+
+.friend-requests li,
+.suggested-friends li {
+  display: flex;
+  align-items: center;
+}
+
+.friend-requests li .name,
+.suggested-friends li .name {
+  margin-right: 10px;
+}
+
+.friend-requests li .btn-group,
+.suggested-friends li .btn-group {
+  margin-left: auto;
+}
+
+.friend-requests li .btn-group button,
+.suggested-friends li .btn-group button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-btn, .delete-btn, .add-btn, .remove-btn {
+  background-color: #4CAF50;
+  color: white;
+  margin-right: 5px;
+}
+
+.confirm-btn:hover, .delete-btn:hover, .add-btn:hover, .remove-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn, .remove-btn {
+  background-color: #f44336;
+}
+
+.delete-btn:hover, .remove-btn:hover {
+  background-color: #da190b;
+}
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  .profile-pic img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Add the rest of your CSS styles here */
+  
