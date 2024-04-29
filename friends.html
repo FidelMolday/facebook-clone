@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend Requests and Suggestions</title>
+    <style>
+        /* Basic styling for the sections */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+        }
+        .user {
+            display: flex;
+            align-items: center;
+        }
+        .user img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Friend Requests and Suggestions</h1>
+
+    <!-- Friend Requests Section -->
+    <section>
+        <h2>Friend Requests</h2>
+        <ul id="friendRequests">
+            <!-- List of friend requests will be dynamically added here -->
+        </ul>
+    </section>
+
+    <!-- Suggested Friends Section -->
+    <section>
+        <h2>Suggested Friends</h2>
+        <ul id="suggestedFriends">
+            <!-- List of suggested friends will be dynamically added here -->
+        </ul>
+    </section>
+
+    <!-- People You May Know Section -->
+    <section>
+        <h2>People You May Know</h2>
+        <ul id="peopleYouMayKnow">
+            <!-- List of people you may know will be dynamically added here -->
+        </ul>
+    </section>
+
+    <script>
+        // Dummy data for demonstration
+        const friendRequestsData = [
+            { name: 'Calleb Aomo', image: 'request4.jpg' },
+            { name: 'Zachary Migiro', image: 'request3.jpg' },
+            { name: 'Faith Adoyo', image: 'request2.jpg' },
+            { name: 'Yusuf Bin ', image: 'request1.jpg' }
+        ];
+
+        const suggestedFriendsData = [
+            { name: 'Atuya Moses', image: 'know.jpg' },
+            { name: 'Silprosa Wapukulu', image: 'know2.jpg' },
+            { name: 'Risper Kasper', image: 'know4.jpg' },
+            { name: 'Suleiman Mohamhed', image: 'know3.jpg' }
+        ];
+
+        const peopleYouMayKnowData = [
+            { name: 'David Lee', image: 'profile.jpg' },
+            { name: 'Bookten', image: 'bookten.jpg' },
+            { name: 'Its Bella', image: 'bella.jpg' },
+            { name: 'KOT Socha', image: 'kot.jpg' }
+        ];
+
+        // Function to populate a list
+        function populateList(listId, data, actionButton) {
+            const list = document.getElementById(listId);
+            list.innerHTML = ""; // Clear existing items
+            data.forEach(item => {
+                const listItem = document.createElement('li');
+                const userDiv = document.createElement('div');
+                userDiv.classList.add('user');
+                const img = document.createElement('img');
+                img.src = item.image;
+                const nameSpan = document.createElement('span');
+                nameSpan.textContent = item.name;
+                userDiv.appendChild(img);
+                userDiv.appendChild(nameSpan);
+                if(actionButton) {
+                    const button = document.createElement('button');
+                    button.classList.add('button');
+                    button.textContent = actionButton.text;
+                    button.onclick = () => actionButton.action(item.name);
+                    userDiv.appendChild(document.createTextNode(' ')); // Add space between image/name and button
+                    userDiv.appendChild(button);
+                }
+                listItem.appendChild(userDiv);
+                list.appendChild(listItem);
+            });
+        }
+
+        // Function to accept a friend request
+        function acceptFriendRequest(request) {
+            alert("Accepted friend request from: " + request);
+            // Perform further actions (e.g., update UI, send request to server)
+        }
+
+        // Function to decline a friend request
+        function declineFriendRequest(request) {
+            alert("Declined friend request from: " + request);
+            // Perform further actions (e.g., update UI, send request to server)
+        }
+
+        // Function to delete a friend request
+        function deleteFriendRequest(request) {
+            alert("Deleted friend request from: " + request);
+            // Perform further actions (e.g., update UI, send request to server)
+        }
+
+        // Function to send a friend request
+        function sendFriendRequest(person) {
+            alert("Sent friend request to: " + person);
+            // Perform further actions (e.g., update UI, send request to server)
+        }
+
+        // Initial population of lists with dummy data
+        populateList('friendRequests', friendRequestsData, { text: 'Delete', action: deleteFriendRequest });
+        populateList('suggestedFriends', suggestedFriendsData, { text: 'Send Request', action: sendFriendRequest });
+        populateList('peopleYouMayKnow', peopleYouMayKnowData, { text: 'Send Request', action: sendFriendRequest });
+    </script>
+</body>
+</html>

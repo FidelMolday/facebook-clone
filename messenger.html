@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook chat</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="search_bar">
+
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" placeholder="Search">
+
+</div>
+  <div class="room">
+
+    <div class="room_image">
+
+    </div>
+
+    <div class="room_profile">
+
+        <img src="/home/fidel/Desktop/Comp 223/profile pic.jpg">
+        <img src="/home/fidel/Desktop/Comp 223/post1.jpg">
+        <img src="/home/fidel/Desktop/Comp 223/moldays.jpg">
+        <img src="/home/fidel/Desktop/Comp 223/profile.jpg">
+        <img src="/home/fidel/Desktop/Comp 223/Jemo.jpeg">
+        <img src="/home/fidel/Desktop/Comp 223/web photo.jpg">
+        <img src="/home/fidel/Desktop/Comp 223/Israel.jpg">
+        <img src="/home/fidel/Desktop/Comp 223/webphoto.jpg">
+
+    </div>
+
+</div>
+
+    
+   
+    <footer>
+      <div class="footer">
+        <!-- Icon for chats -->
+        <i class="fas fa-comment icon"></i>
+    
+        <!-- Icon for calls -->
+        <i class="fas fa-phone icon"></i>
+    
+        <!-- Icon for people -->
+        <i class="fas fa-users icon"></i>
+    
+        <!-- Icon for stories -->
+        <i class="fas fa-book-open icon"></i>
+      </div>
+    </footer>
+<style>
+    html {
+        box-sizing: border-box;
+      }
+    
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #d3d2d2;
+        margin-top: 70px;
+      }
+      body {
+        background-color: #222; /* Dark background color */
+        color: #fff; /* Text color for better visibility */
+      }
+      .conteiner {
+          max-width: 1200px;
+          margin-right: auto;
+          margin-left:auto;
+          padding-left: 10px;
+          padding-right: 10px;
+      }
+      .entry__header {
+          width: 490px;
+          background-color: #7a7ae7;
+      }
+      .entry__author {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+    
+      }
+      .dotted {
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          background-color: #fff;
+          border-radius: 50%;
+          margin-bottom: 4px;
+      }
+      .entry__title {
+          display: inline-block;
+          text-transform: uppercase;
+          color: #fff;
+          margin-left: 12px;
+      }
+    .chat__section {
+        width: 490px;
+        background-color: #fff;
+    }
+    .line {
+        width: 296px;
+        margin: 0;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .data__today {
+        text-transform: uppercase;
+        color: gray;
+    }
+    .massage-chat__left {
+        padding-left: 22px;
+    }
+    .data-chat {
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .time-chat {
+        font-size: 12px;
+        color: gray;
+    }
+    .chat-text{
+        width: 325px;
+        background-color: hsla(239, 85%, 80%, 0.4);
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 9px;
+        margin: 0;
+        margin-top: 5px
+    }
+    .massage-chat__right {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .chat-text__right {
+        width: 325px;
+        background-color: hsla(54, 64%, 76%, 0.4);
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 9px;
+        margin: 0;
+        margin-top: 40px
+    }
+    .time-chat__right {
+        font-size: 12px;
+        color: gray;
+        margin-top: 20px;
+        text-align: left;
+    }
+    .chat__text {
+        width: 120px;
+        background-color: hsla(239, 85%, 80%, 0.4);
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 9px;
+        margin: 0;
+        margin-top: 20px
+    }
+    .chat-text__rightt {
+        width: 325px;
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 9px;
+        margin: 0;
+        margin-top: 40px;
+        background-color: hsla(352, 85%, 62%, 0.4);
+        margin-right: 26px;
+    }
+    .title-message {
+        font-size: 15px;
+        font-family: 'Montserrat', sans-serif;
+        margin: 20px;
+        color: #706f6f;
+    }
+    .enter__message{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .button__send {
+        outline: none;
+        background-color: #fff;
+        color: #3f3fd6c2;
+        border: none;
+        font-weight: bold;
+    }
+ html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  body {
+    margin: 0;
+  }
+  main {
+    display: block;
+  }
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  a {
+    background-color: transparent;
+  }
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  small {
+    font-size: 80%;
+  }
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+  img {
+    border-style: none;
+  }
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+  button,
+  input { /* 1 */
+    overflow: visible;
+  }
+  button,
+  select { /* 1 */
+    text-transform: none;
+  }
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+  
+  progress {
+    vertical-align: baseline;
+  }
+  
+  textarea {
+    overflow: auto;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+ 
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+  [type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+
+  details {
+    display: block;
+  }
+
+  summary {
+    display: list-item;
+  }
+
+  template {
+    display: none;
+  }
+
+  [hidden] {
+    display: none;
+  }
+  .enter__message{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    height: 40px;
+    background: #efefef;
+    border-radius: 30px;
+    padding: 0 10px;
+    margin-left: 10px;
+    position: relative;
+    left: 15px;
+}
+.enter__message input{
+    background: transparent;
+    outline: none;
+    border: 0;
+    font-size: 16px;
+    width: 200px;
+}
+nav .left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+nav .left .search_bar{
+  width: 250px;
+  height: 40px;
+  background: #efefef;
+  border-radius: 30px;
+  padding: 0 10px;
+  margin-left: 10px;
+  position: relative;
+  left: 15px;
+}
+
+nav .left .search_bar i{
+  line-height: 40px;
+  font-size: 19px;
+  color: #919191;
+  margin-right: 5px;
+}
+
+nav .left .search_bar input{
+  background: transparent;
+  outline: none;
+  border: 0;
+  font-size: 16px;
+  width: 200px;
+}
+
+.search_bar{
+    width: 250px;
+    height: 40px;
+    background: #efefef;
+    border-radius: 30px;
+    padding: 0 10px;
+    margin-left: 10px;
+    position: relative;
+    left: 15px;
+}
+
+nav .left .search_bar i{
+    line-height: 40px;
+    font-size: 19px;
+    color: #919191;
+    margin-right: 5px;
+}
+
+nav .left .search_bar input{
+    background: transparent;
+    outline: none;
+    border: 0;
+    font-size: 16px;
+    width: 200px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  align-items: center; /* Align items vertically */
+  padding: 15px;
+  background-color: #333; /* Darker background color for the footer */
+  gap: 15px; /* Spacing between icons */
+}
+
+.icon {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #ccc; /* Change color on hover */
+}
+.room {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.room_image {
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+.room_profile {
+  display: flex;
+  flex-direction: column; /* Align images vertically */
+}
+
+.room_profile img {
+  margin-bottom: 10px; /* Adjust margin between images */
+}
+.room {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.room_image {
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+.room_profile {
+  display: flex;
+  flex-direction: column; /* Align images vertically */
+}
+
+.room_profile img {
+  margin-bottom: 10px; /* Adjust margin between images */
+  border-radius: 50%; /* Make the image circular */
+  width: 50px; /* Adjust the width of the image */
+  height: 50px; /* Adjust the height of the image */
+  border: 1px solid #45abff;
+}
+.room {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-bottom: 20px; /* Add some margin to separate it from the chat container */
+}
+
+.room_image {
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+.room_profile {
+  display: flex;
+  flex-direction: column; /* Align images vertically */
+}
+
+.room_profile img {
+  margin-bottom: 10px; /* Adjust margin between images */
+  border-radius: 50%; /* Make the image circular */
+  width: 50px; /* Adjust the width of the image */
+  height: 50px; /* Adjust the height of the image */
+  border: 1px solid #45abff;
+}
+.chat__section {
+  flex-grow: 1; /* Allow the chat section to grow and fill the available space */
+  background-color: #fff;
+  margin-left: auto; /* Push the chat section to the right */
+  margin-top: 20px; 
+}
+
+
+
+</style>
+
+</body>
+</html>

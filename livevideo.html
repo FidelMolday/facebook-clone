@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Videos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="left">
+
+            <div class="logo">
+                <img src="/home/fidel/Desktop/Comp 223/logo head.jpg">
+            </div>
+
+            <div class="search_bar">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search EBook">
+
+            </div>
+
+        </div>
+
+        <div class="center">
+            <a href="social book">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <i class="fa-solid fa-tv"></i>
+            <i class="fa-solid fa-store"></i>
+            <i class="fa-solid fa-users"></i>
+
+        </div>
+
+        <div class="right">
+            <!-- Use the moon icon to toggle dark mode -->
+            <i class="fa-solid fa-moon" onclick="toggleDarkMode()" style="cursor: pointer;"></i>
+            <!-- This is just a simple example, you can style the icon as needed -->
+        
+            <i class="fa-solid fa-list-ul"></i>
+            <i class="fa-brands fa-facebook-messenger"></i>
+            <i class="fa-solid fa-bell"></i>
+            <!-- Remove the profile pic img tag as it's not related to dark mode toggle -->
+        </div>
+      
+    </nav>
+    <div class="container">
+        <section class="row justify-content-center">
+            <h3 class="title text-center pb-3">Watch Short videos</h3>
+            <div id="video-wrapper">
+                <iframe class="playlist-container" async src="https://www.youtube.com/watch?v=D6AqlfY_-U0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3 class="title text-center pb-3">Featured Videos</h3>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-6 pl-1 pr-1">
+                        <iframe class="video-container" async src="https://www.youtube.com/watch?v=f_zhEOn9Q9A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-md-6 pl-1 pr-1">
+                        <iframe class="video-container" async src="https://www.youtube.com/watch?v=X6sdoPYJZFU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <!-- Add more video iframes here for additional videos -->
+                </div>
+            </div>
+            <!--Mobile view-->
+            <div id="carousel-videos" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-videos" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-videos" data-slide-to="1"></li>
+                    <li data-target="#carousel-videos" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <iframe class="video-container" async src="https://www.youtube.com/watch?v=HIXqTlpjW58" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe class="video-container" async src="https://www.youtube.com/watch?v=Hz2F_S3Tl0Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe class="video-container" async src="https://www.youtube.com/watch?v=Y9i3OIMitRQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe class="video-container" async src="https://www.youtube.com/watch?v=nMaw6ZWP0O8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel-videos" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-videos" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+    </div>
+    
+
+    <style>
+        
+/*.video-container {
+	width: 50%;
+	height: 30vh;
+	padding-bottom: 50px;
+}*/
+.playlist-container {
+	width: 100%;
+	height: 70vh;
+	padding-bottom: 10px;
+}
+/* Adjust video container width and margin */
+.video-container {
+    width: calc(50% - 10px); /* 50% width with margin */
+    margin: 0 5px 20px; /* Margin between videos */
+}
+
+/* Style for desktop view */
+@media (min-width: 768px) {
+    .video-container {
+        width: calc(50% - 20px); /* Adjusted width for larger screens */
+        margin: 0 10px 20px; /* Adjusted margin */
+    }
+}
+
+    </style>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const nav = document.querySelector('nav');
+            const rightSection = document.querySelector('.right');
+            const main = document.querySelector('.main');
+        
+            // Toggle dark mode class on body
+            body.classList.toggle('dark-mode');
+        
+            // Toggle dark mode class on nav
+            nav.classList.toggle('dark-mode');
+        
+            // Toggle dark mode class on right section
+            rightSection.classList.toggle('dark-mode');
+        
+            // Toggle dark mode class on main section
+            main.classList.toggle('dark-mode');
+        }    
+    </script>
+</body>
+</html>
